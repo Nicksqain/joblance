@@ -1,0 +1,12 @@
+.header {
+    &-container {
+        background-color: #fff;
+        width: 100%;
+
+        >.left {
+            height: 100px;
+            width: 70%;
+            background-image: url("../../../public/images/main/main-photo.jpg");
+        }
+    }
+}

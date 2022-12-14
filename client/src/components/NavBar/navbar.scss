@@ -1,0 +1,41 @@
+.links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+
+  a {
+    color: #fff;
+    padding: 20px 0;
+    margin-right: 20px;
+  }
+
+  > {
+    a.active {
+      color: #acabab;
+      text-decoration: underline;
+    }
+  }
+}
+
+.links>a {
+  color: #fff;
+  padding: 20px 0;
+  margin-right: 20px;
+}
+
+.profile-tools {
+  display: flex;
+  align-items: center;
+
+  & :last-child {
+    margin-right: 0px;
+  }
+
+  >* {
+    margin-right: 20px;
+    color: #fff;
+  }
+
+
+}
