@@ -22,7 +22,23 @@ const Order = ({ title }) => {
           <div className="creation-date">Создано 03 октября 2022</div>
         </div>
       </div>
-      <div className="order-details"></div>
+      <div className="order-details">
+        <div className="top">
+          <div className="left">
+            <div className="order-service-place">
+              <b className="title">Место оказания услуги</b>
+              <p>Любое</p>
+            </div>
+          </div>
+          <div className="right">
+            <div className="orderer">
+              <p className="title">Заказчик</p>
+              <span className="person-name">Ренат Аримов</span>
+            </div>
+          </div>
+        </div>
+        <div className="bottom"></div>
+      </div>
     </div>
   );
 };

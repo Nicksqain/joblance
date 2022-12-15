@@ -1,5 +1,6 @@
 .order {
       display: flex;
+      flex-direction: column;
       padding: 24px;
       color: #2c2d2e;
       background-color: #fff;
@@ -10,10 +11,11 @@
 
             .top {
                   display: flex;
+                  flex-direction: row;
                   justify-content: space-between;
                   margin-bottom: 10px;
 
-                  .left {
+                  >.left {
                         display: flex;
                         align-items: center;
                         flex-direction: row;
@@ -29,10 +31,31 @@
 
                   }
 
-                  .right {
+                  >.right {
                         .price-range {
                               font-size: 25px;
                               font-weight: 500;
+                        }
+                  }
+            }
+      }
+
+      &-details {
+            .top {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+
+                  >.left {}
+
+                  >.right {
+                        .orderer {
+                              .title {
+                                    font-size: 16px;
+                                    font-weight: 600;
+                              }
+
+                              text-align: end;
                         }
                   }
             }
