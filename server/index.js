@@ -8,6 +8,7 @@ import authRoutes from "./routes/auth";
 import taskRoutes from "./routes/task";
 import conversationRoutes from "./routes/conversations";
 import messagesRoutes from "./routes/messages";
+import ordersRoutes from "./routes/orders";
 
 const morgan = require("morgan");
 
@@ -50,6 +51,7 @@ app.use("/", authRoutes);
 app.use("/tasks", taskRoutes);
 app.use("/api/conversations", conversationRoutes);
 app.use("/api/messages", messagesRoutes);
+app.use("/api/orders", ordersRoutes);
 // app.use("/api", authRoutes);\
 app.use(function (err, req, res, next) {
   console.error(err.stack);

@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import Tab from "../../components/ui/Tabs/Tab";
 import Tabs from "../../components/ui/Tabs/Tabs";
 import { AuthContext } from "../../context/auth";
@@ -41,7 +42,9 @@ const Orders = () => {
           {orderer && (
             <>
               <span>Создайте заказ и выберите исполнителя</span>
-              <button>Find a freelancer</button>
+              <NavLink to="/create">
+                <button>Create a task</button>
+              </NavLink>
             </>
           )}
         </div>

@@ -19,18 +19,19 @@ const Tabs = ({ children, horizontal }) => {
   // EFFECT
   // useEffect(() => {}, []);
   useEffect(() => {
-    const tabButtons = Array.from(tabsRef.current.childNodes);
+    const tabButtons = tabsRef.current.childNodes;
     // Tab buttons click
+
     tabButtons.forEach((button, i) => {
       i === currentTab && button.classList.add("activeTab");
       button.onclick = (e) => {
-        tabButtons.map((b) => b.classList.remove("activeTab"));
+        tabButtons.forEach((b) => b.classList.remove("activeTab"));
         button.classList.add("activeTab");
-        setCurrentTab(e.target.tabIndex);
+        setCurrentTab(e.currentTarget.querySelector(".tab-button").tabIndex);
       };
     });
     setTabs((prev) => [...prev, ...tabsContent]);
-  }, [setTabs]);
+  }, [setTabs, currentTab]);
 
   return (
     <>

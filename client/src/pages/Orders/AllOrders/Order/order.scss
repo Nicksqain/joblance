@@ -1,9 +1,11 @@
 .order {
       display: flex;
       flex-direction: column;
-      padding: 24px;
+      padding: 28px;
       color: #2c2d2e;
+      border-radius: 7px;
       background-color: #fff;
+      margin-bottom: 30px;
 
       &-header {
             width: 100%;
@@ -45,8 +47,16 @@
                   display: flex;
                   flex-direction: row;
                   justify-content: space-between;
+                  margin-bottom: 10px;
 
-                  >.left {}
+                  >.left {
+                        .order-service-place {
+                              .title {
+                                    font-size: 16px;
+                                    font-weight: 600;
+                              }
+                        }
+                  }
 
                   >.right {
                         .orderer {
@@ -57,6 +67,108 @@
 
                               text-align: end;
                         }
+                  }
+            }
+
+            .bottom {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: flex-end;
+                  width: 100%;
+
+                  .order-description {
+                        width: 60%;
+
+                        .description {
+                              font-size: medium;
+                              text-align: justify;
+                              min-width: 200px;
+                        }
+                  }
+
+                  .write-orderer {
+                        // white-space: nowrap;
+                  }
+            }
+      }
+
+      .responses {
+
+
+
+            .response {
+                  padding: 20px;
+                  border-radius: 5px;
+                  border: 1px solid rgba(0, 16, 61, 0.12);
+                  margin-bottom: 20px;
+
+                  .header {
+                        font-family: 'Inter', sans-serif;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-bottom: 20px;
+
+                        .person {
+                              display: flex;
+                              flex-direction: row;
+
+                              .avatar {
+                                    margin-right: 10px;
+                                    // background-color: #bbb;
+
+                                    img {
+                                          width: 50px;
+                                          border-radius: 50%;
+                                          height: 50px;
+                                    }
+                              }
+
+                              .data {
+
+
+                                    .fullname {
+
+                                          font-size: 16px;
+                                          font-weight: 600;
+
+                                          svg {
+                                                margin-left: 5px;
+                                                color: #5f5cee;
+                                          }
+                                    }
+
+                                    .date {
+                                          font-size: 14px;
+                                          color: #787878;
+                                    }
+                              }
+                        }
+
+                        .discuss-btn {
+                              background-color: transparent;
+                              border: 1px solid rgba(44, 45, 46, 0.4);
+                              color: #343434;
+                              font-weight: 600;
+
+                              &:hover {
+
+                                    border: 1px solid rgba(44, 45, 46, 1);
+                              }
+                        }
+                  }
+
+                  .footer {
+                        max-width: 60%;
+
+                        .price {
+                              font-family: 'Inter', sans-serif;
+                              font-weight: 600;
+                              margin-bottom: 10px;
+                        }
+
+                        .description {}
                   }
             }
       }

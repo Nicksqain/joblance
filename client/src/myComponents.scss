@@ -1,0 +1,11 @@
+.my-btn {
+      transition: all ease .15s !important;
+
+      &.my-btn-danger {
+            background-color: #c74f4f;
+
+            &:hover {
+                  background-color: #a53c3c;
+            }
+      }
+}

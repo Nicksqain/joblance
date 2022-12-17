@@ -1,4 +1,5 @@
 import "./App.scss";
+import "./myComponents.scss";
 // import ReactDOM from "react-dom/client";
 import { io } from "socket.io-client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -25,6 +26,7 @@ import Users from "./pages/Users/Users";
 import User from "./pages/User/User";
 import Chat from "./pages/Chat/Chat";
 import Orders from "./pages/Orders/Orders";
+import CreateOrder from "./pages/Orders/CreateOrder/CreateOrder";
 
 function App() {
   const socket = io(
@@ -82,6 +84,11 @@ function App() {
                   {/* ORDERS */}
                   <Route path="/orders" element={<PrivateRoute />}>
                     <Route path="" element={<Orders />} />
+                  </Route>
+
+                  {/* Create Order */}
+                  <Route path="/create" element={<PrivateRoute />}>
+                    <Route path="" element={<CreateOrder />} />
                   </Route>
 
                   {/* 404  */}
